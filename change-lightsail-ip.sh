@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #server酱开关，0为关闭，1为开启
-NOTIFICATION=1
+NOTIFICATION=0
 #server酱api
-SERVERCHAN_KEY='SCU81833T795aa42442f7087af6ff00c90f1455d65e419c7b6a0e9'
+SERVERCHAN_KEY='YOUR_SERVERCHAN_KEY'
 
 REGION=$1
 #ping检测的次数
@@ -82,7 +82,6 @@ function main {
 	done
 }
 
-
 #定义函数发送serverChan通知
 function notification {
 	local json=$(curl -s https://sc.ftqq.com/$SERVERCHAN_KEY.send --data-urlencode "text=$1" --data-urlencode "desp=$2")
@@ -98,8 +97,6 @@ function notification {
 }
 
 main $REGION
-
-	
 
 echo -e '*****************************************************************'
 echo -e '****************************** END ******************************'
