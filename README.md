@@ -31,6 +31,8 @@ chmod +x change-lightsail-ip.sh
 ./change-lightsail-ip.sh YOUR_REGION
 ```
 YOUR_REGION请参考下表替换修改
+|  地区   |   地区码   |
+| --- | --- |
 |美国东部（俄亥俄）| us-east-2 |
 |美国东部（弗吉尼亚北部）| us-east-1  |
 |美国西部（俄勒冈）| us-west-2 |
