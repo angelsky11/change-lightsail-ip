@@ -53,8 +53,8 @@ function main {
 		
 		echo -e "1. checking vps "$OLD_IP
 		
-		ping -c $PINGTIMES $OLD_IP > temp.txt 2>&1
-		grep "$CHECK_PING" temp.txt
+		ping -c $PINGTIMES $OLD_IP > temp.$OLD_IP.txt 2>&1
+		grep "$CHECK_PING" temp.$OLD_IP.txt
 		if [ $? != 0 ]
 		then
 			echo -e "2. this IP is alive, nothing happened"
@@ -78,7 +78,7 @@ function main {
 				notification "${text}" "${desp}"
 			fi
 		fi
-		rm -rf temp.txt	
+		rm -rf temp.$OLD_IP.txt	
 	done
 }
 
